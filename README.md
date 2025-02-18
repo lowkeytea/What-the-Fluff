@@ -1,5 +1,3 @@
-** About **
-
 **Captain Pickles & The News** is a mobile news application that allows you to interact with news content offline or engage in unique conversations with finely-tuned characters—all powered by a local Large Language Model (LLM).
 
 Currently available soon on iOS (with an Android version in development), the app leverages [Llama.cpp](https://github.com/ggerganov/llama.cpp) directly. Depending on your device's capabilities, Captain Pickles uses one of the following models:
