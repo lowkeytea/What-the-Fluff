@@ -1,28 +1,58 @@
-**Logically Tea** is a mobile news application that allows you to interact with news content offline or engage in unique conversations with finely-tuned characters—all powered by a local Large Language Model (LLM).
+# Logically Tea
 
-Currently available soon on iOS (with an Android version in development), the app leverages [Llama.cpp](https://github.com/ggerganov/llama.cpp) directly. Depending on your device's capabilities, Logically Tea uses one of the following models:
+A mobile news application that allows you to interact with news content offline or engage in unique conversations with finely-tuned characters—all powered by a local Large Language Model (LLM).
 
-*   **[Llama 3.2 1B](https://huggingface.co/meta-llama/Llama-3.1-3B-Instruct)**
-*   **[Llama 3.2 3B](https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct)**
+**Copyright © [2025] [Lowkey Tea LLC]. All rights reserved.**
 
-Initially, only one model is downloaded based on device capabilities, but you can later download alternatives.  Character personalities and capabilities are further enhanced using LoRA (Low-Rank Adaptation) models. Full-scale versions of these models, which offer increased creativity and power, are hosted on [Hugging Face](https://huggingface.co), but may exceed the capabilities of typical edge devices. To both create richer character experiences with LoRA adapters and minimize initial download size, Logically Tea is limited to the models against which the LoRA adapters were fine-tuned.
+[![iOS](https://img.shields.io/badge/iOS-Available%20Soon-blue)](https://example.com/appstorelink)  [![Android](https://img.shields.io/badge/Android-In%20Development-orange)](https://example.com/playstorelink)
 
-All code within Logically Tea is native and utilizes a custom system for Retrieval Augmented Generation (RAG) incorporating Universal Sentence Encoder and [ObjectBox](https://objectbox.io/) for its Vector Database. Conversations are stored on device for as long as you want, and are also used as long-term memory.
+**(Replace the example.com links above with actual app store/play store links when available.)**
 
-The characters, such as Captain Annarky and M1lkt3a, were fine-tuned using [unsloth](https://github.com/unslothai/unsloth) using custom datasets created by a script system I created to create a wide variety of scenes, prompt changes, and customization to create more dynamic characters with small prompts.
+## Overview
 
-The Creator and Monster Invasion do not use a LoRA like the previous characters, but instead a variation of the dynamic prompt system used to train the LoRA's themselves. This is primarily as these two character types are much more *dynamic* in variation ranging from different professions and, for the Monster Invasion, completely different creatures and scenarios. Both of them feature dynamically changing system prompts, hidden prompts, and more to help guide them along.  This works far better with the Llama model; Gemma "works" but is not awesome at being creative due to being a tiny model.
+Logically Tea leverages the power of local LLMs to provide interactive and engaging news experiences, even without an internet connection. Converse with unique characters, explore different perspectives, and dive deeper into the news that matters to you.
 
-The Generically You character is simply a summarizer and your basic garden variety AI, if you're into those.
+## Features
 
-The datasets for the LoRA, featuring QA-style prompts and dynamic story content, were generated using a swarm of smaller and larger local LLMs. This included dynamic system prompts, scene-creation LLMs, and a dynamic conversation partner LLM. The distilled output was used to fine-tune the smaller models that now run on iPhone and other edge devices. The primary aim is to retain the unique personalities of these characters while generating interactive stories that can be further enhanced by RAG in future releases. There was a huge amount of trial and error creating the characters and learning what not to include as it turns out it is rediculously easy to "jailbreak" a smaller model with distilled content from a larger model and the use of key-phrases that you'd expect would be innocent but the data in LLMs are anything but that really.
+*   **Offline News Access:** Read and interact with news content downloaded directly to your device.
+*   **Unique Character Conversations:** Engage in dynamic conversations with AI-powered characters, each with their own distinct personalities and perspectives.
+*   **Local LLM Processing:** All processing happens on-device, ensuring privacy and responsiveness.
+*   **Retrieval Augmented Generation (RAG):** A custom RAG system, using Universal Sentence Encoder and ObjectBox, enhances conversations with relevant information.
+*   **Long-Term Memory:** Conversations are stored on-device and used to inform future interactions, creating a more personalized experience.
 
-Documentation regarding the creation of similar content will be released later. In the meantime, you can explore the trained models on my [Hugging Face repository](https://huggingface.co/spybyscript). The models are in GGUF format and compatible with applications such as [LM Studio](https://lmstudio.ai/). In LM Studio, with the full-sized models, you can customize prompts—for example, by setting the persona with prompts like "You are Captain Annarky," "You are M1lkt3a," or by suggesting traits like "you have a shark tail," "you have wolf ears," or "you are made of stardust." Logically Tea utilizes a custom prompt system, so adjusting the system prompt is not currently available in the app.
+## Technologies Used
 
-As primarily an Android developer, deciding to launch my first app privately on the Apple App Store was quite an adventure! I'd gladly do it again, as I think I grew significantly as a developer by taking on a project for a platform I had only fleeting experience with. For beginning developers, I'd say that [Google's AI Studio](https://aistudio.google.com/) is the best resource out there. It's free, and with the right prompts, it can help debug issues and teach you the basics, especially if you approach it as a learning tool. Plus, it's incredibly fast and you can't beat the amount of tokens you can dump into it at one time.
+*   [Llama.cpp](https://github.com/ggerganov/llama.cpp): For local LLM inference.
+*   [Llama 3.2 1B](https://huggingface.co/meta-llama/Llama-3.1-3B-Instruct) / [Llama 3.2 3B](https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct): The base LLMs used. (Note: These models are licensed by Meta and used under their respective licenses.)
+*   LoRA (Low-Rank Adaptation): For fine-tuning character personalities.
+*   Universal Sentence Encoder: For semantic search in the RAG system.
+*   [ObjectBox](https://objectbox.io/): As a Vector Database.
+*   [Unsloth](https://github.com/unslothai/unsloth): For LoRA fine-tuning.
+*   Native code (iOS/Android specific)
 
-**Special Thanks**
+## Character Copyrights
 
-A heartfelt thank you to my daughter for providing the original name, character sketches, and personality concepts, and to my wife for her incredible patience while I developed this app while balancing a full-time job.
+*   Captain Annarky: Copyright © [2025] [Lowkey Tea]. All rights reserved.
+*   M1lkt3a: Copyright © [2025] [Lowkey Tea]. All rights reserved.
 
-A thank you to Vedal (who probably doesn't know of the existence of this app!) as [Vedal & Neuro-sama](https://www.twitch.tv/vedal987) was an inspiration that pushed me to figure out how to do the AI thing myself, and to write this app.
+## Character Details
+
+*   **Captain Annarky & M1lkt3a:** These characters are fine-tuned using LoRA models and custom datasets, enabling dynamic and engaging conversations.
+*   **The Creator & Monster Invasion:** These character types use a dynamic prompt system, allowing for greater variation and flexibility in their responses.
+*   **Generically You:** A simple summarizer and general-purpose AI character.
+
+## Model Training and Data
+
+The datasets for the LoRA models were generated using a swarm of smaller and larger local LLMs, including dynamic system prompts, scene-creation LLMs, and a dynamic conversation partner LLM.  This distilled output was used to fine-tune the smaller models for optimal performance on edge devices.
+
+Trained models are available on my [Hugging Face repository](https://huggingface.co/spybyscript) in GGUF format. They are compatible with applications like [LM Studio](https://lmstudio.ai/).
+
+## Developer's Note
+
+As primarily an Android developer, launching this app on iOS has been a rewarding challenge. For beginner developers, I recommend exploring [Google's AI Studio](https://aistudio.google.com/) as a valuable and free resource for learning and debugging AI-related projects.
+
+## Special Thanks
+
+*   My daughter, for providing the original name, character sketches, and personality concepts.
+*   My wife, for her incredible patience during the development process.
+*   Vedal (of [Vedal & Neuro-sama](https://www.twitch.tv/vedal987)), for the inspiration to explore AI and create this app.
