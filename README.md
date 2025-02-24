@@ -1,16 +1,12 @@
-# Logically Tea
+# What the Fluff!? News!
 
 A mobile news application that allows you to interact with news content offline or engage in unique conversations with finely-tuned characters—all powered by a local Large Language Model (LLM).
 
 **Copyright © [2025] [Lowkey Tea LLC]. All rights reserved.**
 
-[![iOS](https://img.shields.io/badge/iOS-Available%20Soon-blue)](https://example.com/appstorelink)  [![Android](https://img.shields.io/badge/Android-In%20Development-orange)](https://example.com/playstorelink)
-
-**(Replace the example.com links above with actual app store/play store links when available.)**
-
 ## Overview
 
-Logically Tea leverages the power of local LLMs to provide interactive and engaging news experiences, even without an internet connection. Converse with unique characters, explore different perspectives, and dive deeper into the news that matters to you.
+What the Fluff!? News! leverages the power of local LLMs to provide interactive and engaging news experiences, even without an internet connection. Converse with unique characters, explore different perspectives, and dive deeper into the news that matters to you.
 
 ## Features
 
