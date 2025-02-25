@@ -32,49 +32,55 @@ class AIPersonalitySelector {
   
   render() {
     let html = `
-      <h2 class="personality-title">Choose Your News Guide</h2>
-      <p class="personality-subtitle">
-        Select an AI personality to curate and present your news feed in a style that matches your mood
-      </p>
-      
-      <div class="character-grid">
+      <div class="ai-personalities-section">
+        <p class="personality-subtitle">
+          Select an AI personality to curate and present your news feed in a style that matches your mood
+        </p>
+        
+        <div class="character-grid">
     `;
     
     this.personalities.forEach(character => {
       html += `
         <div class="character-card" data-id="${character.id}">
           <div class="character-image-container">
-            <img src="${character.imagePath}" alt="${character.name}" class="character-image">
-            <div class="character-name-overlay">
-              <h3>${character.name}</h3>
-            </div>
+            <img 
+              src="${character.imagePath}" 
+              alt="${character.name}" 
+              class="character-image" 
+            >
           </div>
           
-          <div class="character-details">
-            <p class="character-description">${character.description}</p>
-            
-            <div class="character-traits">
-              ${character.traits.map(trait => `<span class="character-trait">${trait}</span>`).join('')}
-            </div>
+          <div class="character-name-overlay">
+            <h3>${character.name}</h3>
+          </div>
+          
+          <p class="character-description">${character.description}</p>
+          
+          <div class="character-traits">
+            ${character.traits.map(trait => `<span class="character-trait">${trait}</span>`).join('')}
           </div>
         </div>
       `;
     });
     
+    // Rest of your render method stays the same
     html += `
-      </div>
-      <div id="selection-message" class="selection-message hidden">
-        <h3>Ready to read the news with <span id="selected-name"></span>?</h3>
-        <p>Get personalized news delivery with your chosen AI personality guiding you through today's headlines.</p>
-        <button class="start-reading-button">Start Reading</button>
-      </div>
-      
-      <div class="more-features">
-        <h3>More Than Just News</h3>
-        <p>
-          What the Fluff!? News! doesn't just read headlines - chat with your AI personality about stories,
-          ask questions, or simply have a conversation about the topics that matter to you.
-        </p>
+        </div>
+        <div id="selection-message" class="selection-message hidden">
+          <h3>Ready to read the news with <span id="selected-name"></span>?</h3>
+          <p>Get personalized news delivery with your chosen AI personality guiding you through today's headlines.</p>
+          <button class="start-reading-button">Start Reading</button>
+        </div>
+        
+        <div class="more-features">
+          <h3>More Than Just News</h3>
+          <p>
+            What the Fluff!? News! doesn't just read headlines - chat with your AI personality about stories,
+            ask questions, or simply have a conversation about the topics that matter to you.
+          </p>
+          <a href="#" class="app-demo-button">See App Demo</a>
+        </div>
       </div>
     `;
     
