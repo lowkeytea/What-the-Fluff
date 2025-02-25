@@ -95,7 +95,6 @@ header h1 {
   font-size: 1rem;
 }
 
-/* App screenshot styling */
 .app-screenshot {
   max-width: 250px;
   height: auto;
@@ -297,6 +296,7 @@ header h1 {
 .hero-image, .app-hero-image {
   flex: 1;
   display: flex;
+  background-color: transparent; 
   justify-content: center;
 }
 

@@ -171,6 +171,17 @@
     margin-top: 1rem;
   }
   
+  .app-screenshot {
+    max-width: 250px;
+    height: auto;
+    display: block;
+    margin: 2rem 0;
+    border-radius: 8px;
+    background-color: transparent; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform var(--transition-speed);
+  }
+  
   .app-demo-button:hover {
     background-color: var(--secondary-color, #4b0082);
     transform: translateY(-2px);
